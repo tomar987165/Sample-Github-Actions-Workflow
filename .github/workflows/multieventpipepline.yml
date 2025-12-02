@@ -1,0 +1,25 @@
+name: "Multi Events pipeline / workflow" # Name of the pipeline
+on:
+    push: #whenever a push happen it will triger this workflow 
+        branches:
+            - main
+            - test
+            - production
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+                  
+jobs:
+    on_push:
+        if: github.event_name == 'push'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on main push"
+              run: echo " Running one main push"
+    on_pull-request:
+        if: github.event_name == 'pull_request'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on main push"
+              run: echo " Running one main push"
