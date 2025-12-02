@@ -17,4 +17,4 @@ jobs:
               run: date
 
             - name: "Trigger on any branch"
-              run: echo "New push detected on branch: ${{ github.ref_name }}"
+              run: echo "New push detected on branch:" ${{github.ref_name}}
