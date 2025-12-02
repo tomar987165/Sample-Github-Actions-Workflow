@@ -1,12 +1,10 @@
 name: "Multi Events pipeline / workflow" # Name of the pipeline
-
-
-on: #event
+on:
     push: #whenever a push happen it will triger this workflow 
         branches:
             - main
             - test
-
+            
 jobs:
     on_push:
         runs-on: ubuntu-latest
