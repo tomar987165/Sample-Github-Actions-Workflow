@@ -9,7 +9,7 @@ on:
         branches:
             - main
     workflow_dispatch:
-                  
+
 jobs:
     on_push:
         if: github.event_name == 'push'
@@ -23,3 +23,9 @@ jobs:
         steps:
             - name: "Running on main push"
               run: echo " Running one main push"
+    on-workflow-dispatch:
+        if: github.event_name == 'workflow_dispatch'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on workflow_dispatch"
+              run: echo " Running one workflow_dispatch"
