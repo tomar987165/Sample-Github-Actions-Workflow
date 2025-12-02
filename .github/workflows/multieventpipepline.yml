@@ -1,0 +1,15 @@
+name: "Multi Events pipeline / workflow" # Name of the pipeline
+
+
+on: #event
+    push: #whenever a push happen it will triger this workflow 
+        branches:
+            - main
+            - test
+
+jobs:
+    on_push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on main push"
+              run: echo " Running one main push"
