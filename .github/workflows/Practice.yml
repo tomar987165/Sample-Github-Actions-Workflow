@@ -4,11 +4,11 @@ name: "Push on any branch"
 on:
     push:
         branches:
-            - any
+            - '**'
 
 jobs:
     push_on_anybranch:
-        runs-on: ubuntu latest
+        runs-on: ubuntu-latest
         steps:
             - name: "Triger on any branch"
               run: echo " new push detected"
