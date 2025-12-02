@@ -5,9 +5,17 @@ on:
             - main
             - test
             - production
+    pull_request:
+        branches:
+            - main
             
 jobs:
     on_push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on main push"
+              run: echo " Running one main push"
+    on_pull-request:
         runs-on: ubuntu-latest
         steps:
             - name: "Running on main push"
